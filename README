@@ -1,0 +1,11 @@
+1. ryu-manager dijkstra_ryu.py --observe-links
+2. sudo python topology.py
+   sudo mn --topo tree,3 --controller remote
+
+http://csie.nqu.edu.tw/smallko/sdn/dijkstra_ryu.htm 
+
+notes:
+	release 6653 port with:
+		sudo fuser -k 6653/tcp
+	clear mininet topology with:
+		sudo mn -c

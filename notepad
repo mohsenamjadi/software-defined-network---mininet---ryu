@@ -1,0 +1,7 @@
+sudo mn --topo tree,3 --controller remote
+
+sudo ryu-manager --verbose dijkstra_ryu.py --observe-links
+sudo mn --topo tree,3 --mac --switch ovsk --controller remote -x
+
+ovs-ofctl dump-flows s1
+tcpdump -en -i h1 -eth0
